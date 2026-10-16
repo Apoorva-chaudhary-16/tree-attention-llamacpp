@@ -1,0 +1,12 @@
+[
+  {"file": "fluxcache_install.md", "target": "Configuration",
+   "question": "What is the default port of FluxCache?", "expected": "7421"},
+  {"file": "orbit_api.md", "target": "Getting a token",
+   "question": "How long is an Orbit API token valid?", "expected": "45"},
+  {"file": "meeting_notes.md", "target": "Budget review",
+   "question": "How many dollars per month does Karthik plan to save?", "expected": "1,800"},
+  {"file": "lisbon_guide.md", "target": "By air",
+   "question": "How much does a metro ticket from the airport cost?", "expected": "1.85"},
+  {"file": "textutils_module.md", "target": "truncate",
+   "question": "What is the default width of truncate?", "expected": "80"}
+]

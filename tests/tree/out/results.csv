@@ -1,0 +1,6 @@
+doc,A,B,tokens,depth,sequences,sub_min,sub_med,sub_max,markup_pct,pairs_saved_pct,evicted_tokens,test1,test2,control,answer_correct,kv_before,kv_after,kv_drop_pct,prefill_s,answer_s
+fluxcache_install.md,Configuration,Using the package manager,397,3,13,27,52,389,16.6,66.5,53,PASS (exact),PASS (answer line),differs,yes,13016245,11278905,13.3,2.05,0.55
+orbit_api.md,Getting a token,Create a ground station,347,3,10,31,51,340,17.0,65.9,66,PASS (exact),PASS (exact),differs,yes,11376421,9212941,19.0,2.56,0.63
+meeting_notes.md,Budget review,Action items,295,3,8,24,42,284,15.3,46.4,70,PASS (exact),PASS (answer line),differs,yes,9672277,7377677,23.7,2.38,0.65
+lisbon_guide.md,By air,Where to stay,300,3,9,26,52,292,14.0,61.3,54,PASS (exact),PASS (exact),differs,yes,9835673,8065553,18.0,2.51,0.63
+textutils_module.md,truncate,slugify,279,3,8,38,52,272,15.1,38.3,67,PASS (exact),PASS (exact),differs,yes,9147921,6951661,24.0,2.14,0.7
