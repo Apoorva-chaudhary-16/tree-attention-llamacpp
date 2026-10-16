@@ -72,8 +72,21 @@ def core(a):
     return re.split(r"\s{2,}", (a or "").strip())[0].strip()
 
 
+def upto(answer, expected):
+    """The answer text up to and including the first occurrence of the expected value (None if it is absent).
+    Everything the model writes after the answer is filler and can differ by rounding."""
+    a = answer or ""
+    i = a.lower().find(expected.lower())
+    return None if i < 0 else a[: i + len(expected)]
+
+
+def same_through_answer(a, b, expected):
+    ua, ub = upto(a, expected), upto(b, expected)
+    return ua is not None and ua == ub
+
+
 def verdict(exact, same_core):
-    return "PASS (exact)" if exact else ("PASS (answer line)" if same_core else "FAIL")
+    return "PASS (exact)" if exact else ("PASS (through answer)" if same_core else "FAIL")
 
 
 def run_driver(args, path, sid, question, evict=None):
@@ -147,9 +160,9 @@ def main():
             c1 = run_driver(args, p1, B["sid"], cq)
             c2 = run_driver(args, p2, B2["sid"], cq)
             t1_exact = r1["answer1"] == r2["answer1"]
-            t1 = core(r1["answer1"]) == core(r2["answer1"])
+            t1 = same_through_answer(r1["answer1"], r2["answer1"], it["expected"])
             t2_exact = r1["answer1"] == r1["answer2"]
-            t2 = core(r1["answer1"]) == core(r1["answer2"]) and r1["kv_after"] < r1["kv_before"]
+            t2 = same_through_answer(r1["answer1"], r1["answer2"], it["expected"]) and r1["kv_after"] < r1["kv_before"]
             ctl = c1["answer1"] != c2["answer1"]
             correct = it["expected"].lower() in (r1["answer1"] or "").lower()
             drop = 100.0 * (1 - r1["kv_after"] / r1["kv_before"])
