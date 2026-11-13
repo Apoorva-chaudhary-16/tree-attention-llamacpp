@@ -1,0 +1,51 @@
+memory bandwidth used: 33.3 GB/s (triad, peak over thread counts)
+
+llama-3.2-1b Q4_K_M: weights read/token = 0.800 GB (file 0.808 GB, tied embeddings=True), KV = 32.0 KiB per context token, KV bytes == weight bytes at ~24,410 tokens
+   depth      0:  0.802 GB/token  -> predicted    41.5 tok/s  (KV share  0.3 %)
+   depth   1024:  0.836 GB/token  -> predicted    39.9 tok/s  (KV share  4.3 %)
+   depth   2048:  0.869 GB/token  -> predicted    38.3 tok/s  (KV share  8.0 %)
+   depth   4096:  0.936 GB/token  -> predicted    35.6 tok/s  (KV share 14.6 %)
+   depth   8192:  1.070 GB/token  -> predicted    31.1 tok/s  (KV share 25.3 %)
+   depth  16256:  1.335 GB/token  -> predicted    25.0 tok/s  (KV share 40.1 %)
+
+llama-3.2-1b Q8_0: weights read/token = 1.313 GB (file 1.321 GB, tied embeddings=True), KV = 32.0 KiB per context token, KV bytes == weight bytes at ~40,077 tokens
+   depth      0:  1.315 GB/token  -> predicted    25.3 tok/s  (KV share  0.2 %)
+   depth   1024:  1.349 GB/token  -> predicted    24.7 tok/s  (KV share  2.6 %)
+   depth   2048:  1.382 GB/token  -> predicted    24.1 tok/s  (KV share  5.0 %)
+   depth   4096:  1.450 GB/token  -> predicted    23.0 tok/s  (KV share  9.4 %)
+   depth   8192:  1.584 GB/token  -> predicted    21.0 tok/s  (KV share 17.1 %)
+   depth  16256:  1.848 GB/token  -> predicted    18.0 tok/s  (KV share 28.9 %)
+
+llama-3.2-3b Q4_K_M: weights read/token = 2.012 GB (file 2.019 GB, tied embeddings=True), KV = 112.0 KiB per context token, KV bytes == weight bytes at ~17,539 tokens
+   depth      0:  2.019 GB/token  -> predicted    16.5 tok/s  (KV share  0.4 %)
+   depth   1024:  2.136 GB/token  -> predicted    15.6 tok/s  (KV share  5.8 %)
+   depth   2048:  2.254 GB/token  -> predicted    14.8 tok/s  (KV share 10.7 %)
+   depth   4096:  2.489 GB/token  -> predicted    13.4 tok/s  (KV share 19.2 %)
+   depth   8064:  2.944 GB/token  -> predicted    11.3 tok/s  (KV share 31.7 %)
+
+prediction table -> /home/harsh/cpu-inference-option1/results/roofline_predict_laptop.csv
+
+predicted vs measured -> /home/harsh/cpu-inference-option1/results/roofline_compare_laptop.csv
+model          quant    depth thr      pred     meas  eff   achieved GB/s
+llama-3.2-1b   Q4_K_M       0   8      41.5     39.2  0.94  31.5
+llama-3.2-1b   Q4_K_M     512   8      40.7     38.0  0.93  31.1
+llama-3.2-1b   Q4_K_M    2048   8      38.3     30.9  0.81  26.8
+llama-3.2-1b   Q4_K_M    4096   8      35.6     24.5  0.69  22.9
+llama-3.2-1b   Q4_K_M    8192   8      31.1     16.5  0.53  17.6
+llama-3.2-1b   Q4_K_M   16256   8      24.9     10.0  0.40  13.3
+llama-3.2-1b   Q8_0         0   8      25.3     26.3  1.04  34.6
+llama-3.2-1b   Q8_0       512   8      25.0     25.5  1.02  33.9
+llama-3.2-1b   Q8_0      1024   8      24.7     24.7  1.00  33.3
+llama-3.2-1b   Q8_0      2048   8      24.1     22.6  0.94  31.3
+llama-3.2-1b   Q8_0      4096   8      23.0     18.8  0.82  27.3
+llama-3.2-1b   Q8_0      8192   8      21.0     13.8  0.65  21.8
+llama-3.2-1b   Q8_0     16256   8      18.0      9.0  0.50  16.7
+llama-3.2-3b   Q4_K_M       0   8      16.5     16.0  0.97  32.2
+llama-3.2-3b   Q4_K_M     512   8      16.0     15.5  0.96  32.1
+llama-3.2-3b   Q4_K_M    1024   8      15.6     14.3  0.92  30.5
+llama-3.2-3b   Q4_K_M    2048   8      14.8     11.8  0.80  26.6
+llama-3.2-3b   Q4_K_M    4096   8      13.4      8.9  0.66  22.1
+llama-3.2-3b   Q4_K_M    8064   8      11.3      6.1  0.54  17.9
+llama-3.2-1b   Q4_K_M    1024   8      39.9     35.4  0.89  29.6
+
+How to read it: efficiency = measured / predicted. ~0.7-0.9 means decode is bandwidth-bound; much lower means compute, threading or cache effects (see profiling).

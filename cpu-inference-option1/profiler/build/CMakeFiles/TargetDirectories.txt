@@ -1,0 +1,3 @@
+/home/harsh/cpu-inference-option1/profiler/build/CMakeFiles/op_profile.dir
+/home/harsh/cpu-inference-option1/profiler/build/CMakeFiles/edit_cache.dir
+/home/harsh/cpu-inference-option1/profiler/build/CMakeFiles/rebuild_cache.dir

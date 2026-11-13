@@ -1,0 +1,28 @@
+### PROMPT: 'The capital of France is'
+Paris. The Eiffel Tower is located in Paris. The Eiffel Tower is one of the most famous landmarks in the world. It was built for the 1889 World's Fair. The Eiffel Tower stands at 324 meters (1,063 feet) tall. It is a symbol of Paris
+[sane=True]
+
+### PROMPT: 'Explain in two sentences why the sky is blue.'
+The sky appears blue because of a phenomenon called Rayleigh scattering, which occurs when sunlight interacts with the tiny molecules of gases in the Earth's atmosphere. These molecules scatter the shorter wavelengths of light, such as blue and violet, more than the longer wavelengths, like red and orange, resulting in the blue color we see in
+[sane=True]
+
+### PROMPT: 'def fibonacci(n):\n    """Return the n-th Fibonacci number."""\n'
+if n <= 0:
+        return "Input should be a positive integer"
+    elif n == 1:
+        return 0
+    elif n == 2:
+        return 1
+    else:
+        fib_sequence = [0, 1]
+        while len(fib_sequence) < n:
+[sane=True]
+
+### PROMPT: 'List three differences between a CPU and a GPU:'
+1. **Architecture**: 
+   - CPU (Central Processing Unit): Typically has a more complex architecture, with multiple cores and threads, designed for general-purpose computing.
+   - GPU (Graphics Processing Unit): Designed for graphics and compute tasks, with a simpler architecture that focuses on parallel processing.
+
+2. **Functionality
+[sane=True]
+

@@ -1,0 +1,38 @@
+==========================================
+SLURM_CLUSTER_NAME = paramrudra
+SLURM_ARRAY_JOB_ID = 
+SLURM_ARRAY_TASK_ID = 
+SLURM_ARRAY_TASK_COUNT = 
+SLURM_ARRAY_TASK_MAX = 
+SLURM_ARRAY_TASK_MIN = 
+SLURM_JOB_ACCOUNT = nsmext
+SLURM_JOB_ID = 186220
+SLURM_JOB_NAME = stream_hw
+SLURM_JOB_NODELIST = rdcn20
+SLURM_JOB_USER = bapic_iiitd
+SLURM_JOB_UID = 56023
+SLURM_JOB_PARTITION = cpu
+SLURM_TASK_PID = 49818
+SLURM_SUBMIT_DIR = /home/bapic_iiitd/1_group/harsh_opt1/cpu-inference-option1
+SLURM_CPUS_ON_NODE = 4
+SLURM_NTASKS = 1
+SLURM_TASK_PID = 49818
+==========================================
+STREAM_ARRAY_SIZE=40000000 elements (0.89 GiB for 3 arrays), NTIMES=10
+### Hardware record - rudra
+
+| Item | Value |
+|---|---|
+| CPU | Intel(R) Xeon(R) Gold 6240R CPU @ 2.40GHz |
+| Cores / threads used | physical(psutil)=48, benchmark max threads=4 |
+| Hybrid P-core mask | n/a (not hybrid or not Linux) |
+| Cache L1d / L2 / L3 | 32K / 1024K / 36608K |
+| SIMD | AVX-512 (avx, avx2, avx512_vnni, avx512bw, avx512f, avx512vl, f16c, fma, sse4_2) |
+| RAM | 187.53 GB total |
+| OS | Linux-4.18.0-513.5.1.el8_9.x86_64-x86_64-with-glibc2.28 |
+| Governor / power | performance |
+| llama.cpp commit | unknown |
+| STREAM bandwidth | not measured yet - run scripts/02_stream.py |
+
+saved /home/bapic_iiitd/1_group/harsh_opt1/cpu-inference-option1/results/hardware_rudra.json
+finished

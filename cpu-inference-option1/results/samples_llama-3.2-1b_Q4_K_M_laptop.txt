@@ -1,0 +1,29 @@
+### PROMPT: 'The capital of France is'
+Paris. The capital of France is Paris. The capital of France is Paris. The capital of France is Paris. The capital of France is Paris. The capital of France is Paris. The capital of France is Paris. The capital of France is Paris. The capital of France is Paris. The capital of France is Paris
+[sane=True]
+
+### PROMPT: 'Explain in two sentences why the sky is blue.'
+The sky appears blue because of the way that light interacts with the tiny molecules of gases in the Earth's atmosphere, such as nitrogen and oxygen. When sunlight enters the atmosphere, it encounters these molecules and is scattered in all directions, giving the sky its characteristic blue color. [end of text]
+[sane=True]
+
+### PROMPT: 'def fibonacci(n):\n    """Return the n-th Fibonacci number."""\n'
+if n <= 0:
+        return "Input should be a positive integer"
+    elif n == 1:
+        return 0
+    elif n == 2:
+        return 1
+    else:
+        fib_sequence = [0, 1]
+        while len(fib_sequence) < n:
+[sane=True]
+
+### PROMPT: 'List three differences between a CPU and a GPU:'
+1. Purpose
+2. Architecture
+3. Functionality
+
+## Step 1: Understanding the Purpose of a CPU and a GPU
+A CPU (Central Processing Unit) is designed to handle general-purpose computing tasks such as executing instructions, managing data, and controlling the flow of data between different parts of the system
+[sane=True]
+

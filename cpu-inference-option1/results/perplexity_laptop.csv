@@ -1,0 +1,4 @@
+timestamp,tag,model,quant,ctx,chunks,threads,ppl,ppl_err,peak_rss_gb,wall_s,status,llama_commit
+2026-11-06 21:01:51,laptop,llama-3.2-1b,Q4_K_M,512,40,4,14.8829,0.41895,2.101,75.2,ok,2bc46baa9207d098d03741ac394e7faaf1a955b6
+2026-11-06 21:03:50,laptop,llama-3.2-1b,Q8_0,512,40,4,14.3636,0.40441,2.143,110.5,ok,2bc46baa9207d098d03741ac394e7faaf1a955b6
+2026-11-06 21:07:25,laptop,llama-3.2-3b,Q4_K_M,512,40,4,10.7962,0.29044,4.203,203.0,ok,2bc46baa9207d098d03741ac394e7faaf1a955b6

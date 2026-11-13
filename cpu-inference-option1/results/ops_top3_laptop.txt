@@ -1,0 +1,133 @@
+
+== llama-3.2-1b Q4_K_M [baseline] decode depth=0 threads=8 ==  plain 24.936 ms/token, instrumented 25.530 ms/token (instrumentation overhead +2.4 %)
+  1. MUL_MAT:result_output [q6_K]                 6.0664 ms/token   24.1 %   <- top-3
+  2. MUL_MAT:ffn_up [q4_K]                        4.6637 ms/token   18.5 %   <- top-3
+  3. MUL_MAT:ffn_gate [q4_K]                      4.5783 ms/token   18.2 %   <- top-3
+  4. MUL_MAT:ffn_out [q6_K]                       3.2362 ms/token   12.8 %
+  5. MUL_MAT:ffn_out [q4_K]                       2.3793 ms/token    9.4 %
+
+== llama-3.2-1b Q4_K_M [baseline] decode depth=1024 threads=8 ==  plain 27.129 ms/token, instrumented 28.246 ms/token (instrumentation overhead +4.1 %)
+  1. MUL_MAT:result_output [q6_K]                 6.0409 ms/token   21.6 %   <- top-3
+  2. MUL_MAT:ffn_up [q4_K]                        4.6772 ms/token   16.8 %   <- top-3
+  3. MUL_MAT:ffn_gate [q4_K]                      4.5633 ms/token   16.4 %   <- top-3
+  4. MUL_MAT:ffn_out [q6_K]                       3.2066 ms/token   11.5 %
+  5. FLASH_ATTN_EXT:-                             3.0103 ms/token   10.8 %
+
+== llama-3.2-1b Q4_K_M [baseline] decode depth=4096 threads=8 ==  plain 38.860 ms/token, instrumented 39.411 ms/token (instrumentation overhead +1.4 %)
+  1. FLASH_ATTN_EXT:-                            13.7319 ms/token   35.2 %   <- top-3
+  2. MUL_MAT:result_output [q6_K]                 6.1684 ms/token   15.8 %   <- top-3
+  3. MUL_MAT:ffn_gate [q4_K]                      4.6650 ms/token   12.0 %   <- top-3
+  4. MUL_MAT:ffn_up [q4_K]                        4.5407 ms/token   11.6 %
+  5. MUL_MAT:ffn_out [q6_K]                       3.2004 ms/token    8.2 %
+
+== llama-3.2-1b Q4_K_M [baseline] decode depth=8192 threads=8 ==  plain 59.106 ms/token, instrumented 59.424 ms/token (instrumentation overhead +0.5 %)
+  1. FLASH_ATTN_EXT:-                            33.2166 ms/token   56.4 %   <- top-3
+  2. MUL_MAT:result_output [q6_K]                 6.2005 ms/token   10.5 %   <- top-3
+  3. MUL_MAT:ffn_gate [q4_K]                      4.6912 ms/token    8.0 %   <- top-3
+  4. MUL_MAT:ffn_up [q4_K]                        4.6386 ms/token    7.9 %
+  5. MUL_MAT:ffn_out [q6_K]                       3.2707 ms/token    5.6 %
+
+== llama-3.2-1b Q4_K_M [baseline] decode depth=16312 threads=8 ==  plain 98.808 ms/token, instrumented 100.115 ms/token (instrumentation overhead +1.3 %)
+  1. FLASH_ATTN_EXT:-                            73.0141 ms/token   73.4 %   <- top-3
+  2. MUL_MAT:result_output [q6_K]                 6.2932 ms/token    6.3 %   <- top-3
+  3. MUL_MAT:ffn_gate [q4_K]                      4.7832 ms/token    4.8 %   <- top-3
+  4. MUL_MAT:ffn_up [q4_K]                        4.7501 ms/token    4.8 %
+  5. MUL_MAT:ffn_out [q6_K]                       3.3588 ms/token    3.4 %
+
+== llama-3.2-1b Q4_K_M [baseline] prefill depth=0 threads=8 ==  plain 2.442 ms/token, instrumented 2.432 ms/token (instrumentation overhead -0.4 %)
+  1. MUL_MAT:ffn_gate [q4_K]                      0.6065 ms/token   25.0 %   <- top-3
+  2. MUL_MAT:ffn_up [q4_K]                        0.5858 ms/token   24.1 %   <- top-3
+  3. MUL_MAT:ffn_out [q4_K]                       0.3255 ms/token   13.4 %   <- top-3
+  4. MUL_MAT:ffn_out [q6_K]                       0.2696 ms/token   11.1 %
+  5. MUL_MAT:attn_out [q4_K]                      0.1648 ms/token    6.8 %
+
+== llama-3.2-1b Q4_K_M [fa_off] decode depth=8192 threads=8 ==  plain 44.019 ms/token, instrumented 45.324 ms/token (instrumentation overhead +3.0 %)
+  1. SOFT_MAX:kq_soft_max                         7.1425 ms/token   15.9 %   <- top-3
+  2. MUL_MAT:kqv [f16]                            6.3229 ms/token   14.1 %   <- top-3
+  3. MUL_MAT:result_output [q6_K]                 6.1539 ms/token   13.7 %   <- top-3
+  4. MUL_MAT:kq [f16]                             5.9031 ms/token   13.2 %
+  5. MUL_MAT:ffn_gate [q4_K]                      4.6266 ms/token   10.3 %
+
+== llama-3.2-1b Q4_K_M [fa_off] decode depth=16312 threads=8 ==  plain 62.301 ms/token, instrumented 64.768 ms/token (instrumentation overhead +4.0 %)
+  1. SOFT_MAX:kq_soft_max                        13.9938 ms/token   21.8 %   <- top-3
+  2. MUL_MAT:kq [f16]                            12.2999 ms/token   19.2 %   <- top-3
+  3. MUL_MAT:kqv [f16]                           11.6081 ms/token   18.1 %   <- top-3
+  4. MUL_MAT:result_output [q6_K]                 6.3338 ms/token    9.9 %
+  5. MUL_MAT:ffn_up [q4_K]                        4.7687 ms/token    7.4 %
+
+== llama-3.2-1b Q8_0 [baseline] decode depth=0 threads=8 ==  plain 39.188 ms/token, instrumented 41.374 ms/token (instrumentation overhead +5.6 %)
+  1. MUL_MAT:ffn_out [q8_0]                       8.7649 ms/token   21.4 %   <- top-3
+  2. MUL_MAT:ffn_up [q8_0]                        8.5830 ms/token   20.9 %   <- top-3
+  3. MUL_MAT:ffn_gate [q8_0]                      8.2210 ms/token   20.0 %   <- top-3
+  4. MUL_MAT:result_output [q8_0]                 7.8009 ms/token   19.0 %
+  5. MUL_MAT:Qcur [q8_0]                          2.2703 ms/token    5.5 %
+
+== llama-3.2-1b Q8_0 [baseline] decode depth=1024 threads=8 ==  plain 40.606 ms/token, instrumented 41.577 ms/token (instrumentation overhead +2.4 %)
+  1. MUL_MAT:ffn_out [q8_0]                       8.2310 ms/token   20.0 %   <- top-3
+  2. MUL_MAT:ffn_up [q8_0]                        8.0174 ms/token   19.5 %   <- top-3
+  3. MUL_MAT:ffn_gate [q8_0]                      7.9665 ms/token   19.3 %   <- top-3
+  4. MUL_MAT:result_output [q8_0]                 7.7774 ms/token   18.9 %
+  5. FLASH_ATTN_EXT:-                             3.0225 ms/token    7.3 %
+
+== llama-3.2-1b Q8_0 [baseline] decode depth=4096 threads=8 ==  plain 52.473 ms/token, instrumented 54.884 ms/token (instrumentation overhead +4.6 %)
+  1. FLASH_ATTN_EXT:-                            14.7616 ms/token   27.1 %   <- top-3
+  2. MUL_MAT:ffn_out [q8_0]                       8.4943 ms/token   15.6 %   <- top-3
+  3. MUL_MAT:ffn_up [q8_0]                        8.4107 ms/token   15.4 %   <- top-3
+  4. MUL_MAT:ffn_gate [q8_0]                      8.2442 ms/token   15.1 %
+  5. MUL_MAT:result_output [q8_0]                 7.9814 ms/token   14.7 %
+
+== llama-3.2-1b Q8_0 [baseline] decode depth=8192 threads=8 ==  plain 73.069 ms/token, instrumented 74.317 ms/token (instrumentation overhead +1.7 %)
+  1. FLASH_ATTN_EXT:-                            34.3259 ms/token   46.5 %   <- top-3
+  2. MUL_MAT:ffn_out [q8_0]                       8.3344 ms/token   11.3 %   <- top-3
+  3. MUL_MAT:ffn_up [q8_0]                        8.3288 ms/token   11.3 %   <- top-3
+  4. MUL_MAT:ffn_gate [q8_0]                      8.2740 ms/token   11.2 %
+  5. MUL_MAT:result_output [q8_0]                 7.9020 ms/token   10.7 %
+
+== llama-3.2-1b Q8_0 [baseline] decode depth=16312 threads=8 ==  plain 111.249 ms/token, instrumented 112.846 ms/token (instrumentation overhead +1.4 %)
+  1. FLASH_ATTN_EXT:-                            72.4718 ms/token   64.6 %   <- top-3
+  2. MUL_MAT:ffn_gate [q8_0]                      8.3789 ms/token    7.5 %   <- top-3
+  3. MUL_MAT:ffn_out [q8_0]                       8.3485 ms/token    7.4 %   <- top-3
+  4. MUL_MAT:ffn_up [q8_0]                        8.2712 ms/token    7.4 %
+  5. MUL_MAT:result_output [q8_0]                 7.8777 ms/token    7.0 %
+
+== llama-3.2-1b Q8_0 [baseline] prefill depth=0 threads=8 ==  plain 3.700 ms/token, instrumented 3.465 ms/token (instrumentation overhead -6.4 %)
+  1. MUL_MAT:ffn_gate [q8_0]                      0.9010 ms/token   26.0 %   <- top-3
+  2. MUL_MAT:ffn_up [q8_0]                        0.8619 ms/token   24.9 %   <- top-3
+  3. MUL_MAT:ffn_out [q8_0]                       0.8569 ms/token   24.8 %   <- top-3
+  4. MUL_MAT:Qcur [q8_0]                          0.2546 ms/token    7.4 %
+  5. MUL_MAT:attn_out [q8_0]                      0.2468 ms/token    7.1 %
+
+== llama-3.2-3b Q4_K_M [baseline] decode depth=0 threads=8 ==  plain 61.702 ms/token, instrumented 64.120 ms/token (instrumentation overhead +3.9 %)
+  1. MUL_MAT:ffn_up [q4_K]                       12.1085 ms/token   19.1 %   <- top-3
+  2. MUL_MAT:ffn_gate [q4_K]                     12.0653 ms/token   19.0 %   <- top-3
+  3. MUL_MAT:result_output [q6_K]                 9.3129 ms/token   14.7 %   <- top-3
+  4. MUL_MAT:ffn_out [q6_K]                       8.5398 ms/token   13.4 %
+  5. MUL_MAT:ffn_out [q4_K]                       6.1368 ms/token    9.7 %
+
+== llama-3.2-3b Q4_K_M [baseline] decode depth=1024 threads=8 ==  plain 71.060 ms/token, instrumented 72.069 ms/token (instrumentation overhead +1.4 %)
+  1. MUL_MAT:ffn_up [q4_K]                       11.9809 ms/token   16.8 %   <- top-3
+  2. MUL_MAT:ffn_gate [q4_K]                     11.7889 ms/token   16.5 %   <- top-3
+  3. FLASH_ATTN_EXT:-                             9.5419 ms/token   13.4 %   <- top-3
+  4. MUL_MAT:result_output [q6_K]                 9.1483 ms/token   12.8 %
+  5. MUL_MAT:ffn_out [q6_K]                       8.4676 ms/token   11.9 %
+
+== llama-3.2-3b Q4_K_M [baseline] decode depth=4096 threads=8 ==  plain 113.598 ms/token, instrumented 114.572 ms/token (instrumentation overhead +0.9 %)
+  1. FLASH_ATTN_EXT:-                            50.2605 ms/token   44.2 %   <- top-3
+  2. MUL_MAT:ffn_up [q4_K]                       12.1215 ms/token   10.7 %   <- top-3
+  3. MUL_MAT:ffn_gate [q4_K]                     12.0705 ms/token   10.6 %   <- top-3
+  4. MUL_MAT:result_output [q6_K]                 9.3095 ms/token    8.2 %
+  5. MUL_MAT:ffn_out [q6_K]                       8.6479 ms/token    7.6 %
+
+== llama-3.2-3b Q4_K_M [baseline] decode depth=8120 threads=8 ==  plain 161.344 ms/token, instrumented 164.177 ms/token (instrumentation overhead +1.8 %)
+  1. FLASH_ATTN_EXT:-                            99.3615 ms/token   61.0 %   <- top-3
+  2. MUL_MAT:ffn_up [q4_K]                       12.1743 ms/token    7.5 %   <- top-3
+  3. MUL_MAT:ffn_gate [q4_K]                     12.1278 ms/token    7.4 %   <- top-3
+  4. MUL_MAT:result_output [q6_K]                 9.2454 ms/token    5.7 %
+  5. MUL_MAT:ffn_out [q6_K]                       8.5179 ms/token    5.2 %
+
+== llama-3.2-3b Q4_K_M [baseline] prefill depth=0 threads=8 ==  plain 6.987 ms/token, instrumented 7.010 ms/token (instrumentation overhead +0.3 %)
+  1. MUL_MAT:ffn_up [q4_K]                        1.6242 ms/token   23.2 %   <- top-3
+  2. MUL_MAT:ffn_gate [q4_K]                      1.6084 ms/token   23.0 %   <- top-3
+  3. MUL_MAT:ffn_out [q4_K]                       0.8690 ms/token   12.4 %   <- top-3
+  4. MUL_MAT:ffn_out [q6_K]                       0.7396 ms/token   10.6 %
+  5. MUL_MAT:Qcur [q4_K]                          0.6222 ms/token    8.9 %

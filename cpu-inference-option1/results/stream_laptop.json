@@ -1,0 +1,36 @@
+{
+  "tag": "laptop",
+  "array_elems": 40000000,
+  "ntimes": 20,
+  "openmp": true,
+  "proc_bind": "close",
+  "per_thread_gbs": {
+    "1": {
+      "Copy": 30.386599999999998,
+      "Scale": 19.124,
+      "Add": 22.8012,
+      "Triad": 22.916700000000002
+    },
+    "2": {
+      "Copy": 31.1298,
+      "Scale": 21.4635,
+      "Add": 24.9793,
+      "Triad": 25.0305
+    },
+    "4": {
+      "Copy": 32.2027,
+      "Scale": 31.8093,
+      "Add": 32.7086,
+      "Triad": 32.7568
+    },
+    "8": {
+      "Copy": 33.0459,
+      "Scale": 33.063,
+      "Add": 33.2881,
+      "Triad": 33.3044
+    }
+  },
+  "best_threads": 8,
+  "peak_triad_gbs": 33.3044,
+  "peak_copy_gbs": 33.0459
+}

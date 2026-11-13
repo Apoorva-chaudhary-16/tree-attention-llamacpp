@@ -1,0 +1,47 @@
+==========================================
+SLURM_CLUSTER_NAME = paramrudra
+SLURM_ARRAY_JOB_ID = 
+SLURM_ARRAY_TASK_ID = 
+SLURM_ARRAY_TASK_COUNT = 
+SLURM_ARRAY_TASK_MAX = 
+SLURM_ARRAY_TASK_MIN = 
+SLURM_JOB_ACCOUNT = nsmext
+SLURM_JOB_ID = 186232
+SLURM_JOB_NAME = stream_hw
+SLURM_JOB_NODELIST = rdcn20
+SLURM_JOB_USER = bapic_iiitd
+SLURM_JOB_UID = 56023
+SLURM_JOB_PARTITION = cpu
+SLURM_TASK_PID = 51438
+SLURM_SUBMIT_DIR = /home/bapic_iiitd/1_group/harsh_opt1/cpu-inference-option1
+SLURM_CPUS_ON_NODE = 4
+SLURM_NTASKS = 1
+SLURM_TASK_PID = 51438
+==========================================
+/home/apps/spack/opt/spack/linux-almalinux8-skylake_avx512/gcc-8.5.0/gcc-13.2.0-kvlnzqvdnuljrd6gtbi4civk5gvtucud/bin/gcc
+PATH=/home/bapic_iiitd/1_group/harsh_opt1/venv/bin:/home/apps/spack/opt/spack/linux-almalinux8-skylake_avx512/gcc-8.5.0/gcc-13.2.0-kvlnzqvdnuljrd6gtbi4civk5gvtucud/bin:/home/apps/spack/opt/spack/linux-almalinux8-skylake_avx512/gcc-8.5.0/gcc-13.2.0-kvlnzqvdnuljrd6gtbi4civk5gvtucud/bin:/home/apps/spack/bin:/home/apps/spack/opt/spack/linux-almalinux8-skylake_avx512/gcc-8.5.0/gcc-13.2.0-kvlnzqvdnuljrd6gtbi4civk5gvtucud/bin:/home/apps/spack/opt/spack/linux-almalinux8-skylake_avx512/gcc-8.5.0/gcc-13.2.0-kvlnzqvdnuljrd6gtbi4civk5gvtucud/bin:/home/apps/spack/bin:/home/bapic_iiitd/1_group/harsh_opt1/venv/bin:/home/apps/spack/opt/spack/linux-almalinux8-skylake_avx512/gcc-8.5.0/gcc-13.2.0-kvlnzqvdnuljrd6gtbi4civk5gvtucud/bin:/home/apps/spack/opt/spack/linux-almalinux8-skylake_avx512/gcc-8.5.0/gcc-13.2.0-kvlnzqvdnuljrd6gtbi4civk5gvtucud/bin:/home/apps/spack/bin:/home/bapic_iiitd/.local/bin:/home/bapic_iiitd/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
+STREAM_ARRAY_SIZE=40000000 elements (0.89 GiB for 3 arrays), NTIMES=10
+reusing existing binary /home/bapic_iiitd/1_group/harsh_opt1/cpu-inference-option1/data/stream/stream_bin (its array size/NTIMES were fixed when it was compiled)
+threads=  1  Copy=  10.5  Scale=  12.6  Add=  13.4  Triad=  13.5  GB/s
+threads=  2  Copy=  20.8  Scale=  24.6  Add=  26.0  Triad=  26.0  GB/s
+threads=  4  Copy=  40.9  Scale=  46.6  Add=  49.8  Triad=  50.0  GB/s
+
+Peak Triad bandwidth: 50.0 GB/s at 4 threads -> /home/bapic_iiitd/1_group/harsh_opt1/cpu-inference-option1/results/stream_rudra.json
+Note: use this number as the 'memory-bandwidth limit' in the roofline (05_roofline.py).
+### Hardware record - rudra
+
+| Item | Value |
+|---|---|
+| CPU | Intel(R) Xeon(R) Gold 6240R CPU @ 2.40GHz |
+| Cores / threads used | physical(psutil)=48, benchmark max threads=4 |
+| Hybrid P-core mask | n/a (not hybrid or not Linux) |
+| Cache L1d / L2 / L3 | 32K / 1024K / 36608K |
+| SIMD | AVX-512 (avx, avx2, avx512_vnni, avx512bw, avx512f, avx512vl, f16c, fma, sse4_2) |
+| RAM | 187.53 GB total |
+| OS | Linux-4.18.0-513.5.1.el8_9.x86_64-x86_64-with-glibc2.28 |
+| Governor / power | performance |
+| llama.cpp commit | unknown |
+| STREAM Triad (best, 4 thr) | 50.0 GB/s |
+
+saved /home/bapic_iiitd/1_group/harsh_opt1/cpu-inference-option1/results/hardware_rudra.json
+finished

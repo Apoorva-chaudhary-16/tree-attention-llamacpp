@@ -1,0 +1,5 @@
+tag,model,quant,depth,threads,attn_ms,other_ms,plain_tok_s,attn_speedup,other_speedup
+laptop,llama-3.2-1b,Q4_K_M,8192,1,152.626,53.573,4.806,1.0,1.0
+laptop,llama-3.2-1b,Q4_K_M,8192,2,102.011,44.625,6.923,1.496,1.201
+laptop,llama-3.2-1b,Q4_K_M,8192,4,64.556,39.163,9.608,2.364,1.368
+laptop,llama-3.2-1b,Q4_K_M,8192,8,43.165,37.193,4.63,3.536,1.44

@@ -1,0 +1,142 @@
+[info] results -> /home/harsh/cpu-inference-option1/results/bench_laptop.csv
+[info] llama-bench: /home/harsh/cpu-inference-option1/third_party/llama.cpp/build/bin/llama-bench
+[info] max threads: 8, thread sweep: [1, 2, 4, 8], reps: 3, extra flags: ''
+[run ] llama-3.2-1b Q4_K_M prefill p=128    n=0    d=0      t=8   (attempt 1, free RAM 7.9 GB)
+       ->   421.14 +/- 24.98 tok/s | peak RSS 1.27 GB
+[run ] llama-3.2-1b Q4_K_M prefill p=512    n=0    d=0      t=8   (attempt 1, free RAM 7.9 GB)
+       ->   446.91 +/-  3.94 tok/s | peak RSS 1.33 GB
+[run ] llama-3.2-1b Q4_K_M prefill p=1024   n=0    d=0      t=8   (attempt 1, free RAM 7.9 GB)
+       ->   417.81 +/-  3.45 tok/s | peak RSS 1.34 GB
+[run ] llama-3.2-1b Q4_K_M prefill p=2048   n=0    d=0      t=8   (attempt 1, free RAM 7.9 GB)
+       ->   383.92 +/-  3.20 tok/s | peak RSS 1.38 GB
+[run ] llama-3.2-1b Q4_K_M prefill p=4096   n=0    d=0      t=8   (attempt 1, free RAM 7.9 GB)
+       ->   323.75 +/-  4.33 tok/s | peak RSS 1.44 GB
+[run ] llama-3.2-1b Q4_K_M prefill p=8192   n=0    d=0      t=8   (attempt 1, free RAM 7.9 GB)
+       ->   252.87 +/-  0.84 tok/s | peak RSS 1.57 GB
+[run ] llama-3.2-1b Q4_K_M prefill p=16384  n=0    d=0      t=8   (attempt 1, free RAM 7.9 GB)
+[info] results -> /home/harsh/cpu-inference-option1/results/bench_laptop.csv
+[info] llama-bench: /home/harsh/cpu-inference-option1/third_party/llama.cpp/build/bin/llama-bench
+[info] max threads: 8, thread sweep: [1, 2, 4, 8], reps: 3, extra flags: ''
+[resume] skip llama-3.2-1b Q4_K_M prefill p=128 n=0 d=0 t=8
+[resume] skip llama-3.2-1b Q4_K_M prefill p=512 n=0 d=0 t=8
+[resume] skip llama-3.2-1b Q4_K_M prefill p=1024 n=0 d=0 t=8
+[resume] skip llama-3.2-1b Q4_K_M prefill p=2048 n=0 d=0 t=8
+[resume] skip llama-3.2-1b Q4_K_M prefill p=4096 n=0 d=0 t=8
+[resume] skip llama-3.2-1b Q4_K_M prefill p=8192 n=0 d=0 t=8
+[run ] llama-3.2-1b Q4_K_M prefill p=16384  n=0    d=0      t=8   (attempt 1, free RAM 7.9 GB)
+       ->   174.57 +/-  0.35 tok/s | peak RSS 1.83 GB
+[run ] llama-3.2-1b Q4_K_M decode  p=0      n=128  d=0      t=8   (attempt 1, free RAM 7.9 GB)
+       ->    39.23 +/-  1.24 tok/s | peak RSS 1.26 GB
+[run ] llama-3.2-1b Q4_K_M decode  p=0      n=128  d=512    t=8   (attempt 1, free RAM 7.9 GB)
+       ->    37.99 +/-  0.10 tok/s | peak RSS 1.35 GB
+[run ] llama-3.2-1b Q4_K_M decode  p=0      n=128  d=1024   t=8   (attempt 1, free RAM 7.9 GB)
+       ->    31.11 +/-  2.96 tok/s | peak RSS 1.38 GB
+[run ] llama-3.2-1b Q4_K_M decode  p=0      n=128  d=2048   t=8   (attempt 1, free RAM 7.9 GB)
+       ->    30.86 +/-  0.24 tok/s | peak RSS 1.45 GB
+[run ] llama-3.2-1b Q4_K_M decode  p=0      n=128  d=4096   t=8   (attempt 1, free RAM 7.9 GB)
+       ->    24.51 +/-  0.23 tok/s | peak RSS 1.58 GB
+[run ] llama-3.2-1b Q4_K_M decode  p=0      n=128  d=8192   t=8   (attempt 1, free RAM 7.9 GB)
+       ->    16.45 +/-  0.08 tok/s | peak RSS 1.83 GB
+[run ] llama-3.2-1b Q4_K_M decode  p=0      n=128  d=16256  t=8   (attempt 1, free RAM 7.9 GB)
+       ->     9.98 +/-  0.16 tok/s | peak RSS 2.33 GB
+[run ] llama-3.2-1b Q4_K_M threads p=512    n=0    d=0      t=1   (attempt 1, free RAM 7.9 GB)
+       ->    86.16 +/-  0.31 tok/s | peak RSS 1.32 GB
+[run ] llama-3.2-1b Q4_K_M threads p=0      n=128  d=0      t=1   (attempt 1, free RAM 7.9 GB)
+       ->    19.86 +/-  0.11 tok/s | peak RSS 1.26 GB
+[run ] llama-3.2-1b Q4_K_M threads p=512    n=0    d=0      t=2   (attempt 1, free RAM 7.9 GB)
+       ->   154.71 +/-  2.08 tok/s | peak RSS 1.33 GB
+[run ] llama-3.2-1b Q4_K_M threads p=0      n=128  d=0      t=2   (attempt 1, free RAM 7.9 GB)
+       ->    30.14 +/-  0.31 tok/s | peak RSS 1.26 GB
+[run ] llama-3.2-1b Q4_K_M threads p=512    n=0    d=0      t=4   (attempt 1, free RAM 7.9 GB)
+       ->   260.53 +/-  3.27 tok/s | peak RSS 1.33 GB
+[run ] llama-3.2-1b Q4_K_M threads p=0      n=128  d=0      t=4   (attempt 1, free RAM 7.9 GB)
+       ->    37.35 +/-  0.10 tok/s | peak RSS 1.26 GB
+[resume] skip llama-3.2-1b Q4_K_M threads p=512 n=0 d=0 t=8
+[run ] llama-3.2-1b Q4_K_M threads p=0      n=128  d=0      t=8   (attempt 1, free RAM 7.9 GB)
+       ->    40.41 +/-  1.04 tok/s | peak RSS 1.26 GB
+[run ] llama-3.2-1b Q8_0 prefill p=128    n=0    d=0      t=8   (attempt 1, free RAM 7.9 GB)
+       ->   237.81 +/-  6.87 tok/s | peak RSS 1.31 GB
+[run ] llama-3.2-1b Q8_0 prefill p=512    n=0    d=0      t=8   (attempt 1, free RAM 7.9 GB)
+       ->   256.64 +/-  7.03 tok/s | peak RSS 1.37 GB
+[run ] llama-3.2-1b Q8_0 prefill p=1024   n=0    d=0      t=8   (attempt 1, free RAM 7.9 GB)
+       ->   259.90 +/-  2.33 tok/s | peak RSS 1.38 GB
+[run ] llama-3.2-1b Q8_0 prefill p=2048   n=0    d=0      t=8   (attempt 1, free RAM 7.9 GB)
+       ->   248.26 +/-  2.57 tok/s | peak RSS 1.42 GB
+[run ] llama-3.2-1b Q8_0 prefill p=4096   n=0    d=0      t=8   (attempt 1, free RAM 7.9 GB)
+       ->   220.42 +/-  0.96 tok/s | peak RSS 1.48 GB
+[run ] llama-3.2-1b Q8_0 prefill p=8192   n=0    d=0      t=8   (attempt 1, free RAM 7.9 GB)
+       ->   184.15 +/-  0.34 tok/s | peak RSS 1.61 GB
+[run ] llama-3.2-1b Q8_0 prefill p=16384  n=0    d=0      t=8   (attempt 1, free RAM 7.9 GB)
+       ->   142.51 +/-  0.87 tok/s | peak RSS 1.87 GB
+[run ] llama-3.2-1b Q8_0 decode  p=0      n=128  d=0      t=8   (attempt 1, free RAM 7.9 GB)
+       ->    26.29 +/-  0.12 tok/s | peak RSS 1.30 GB
+[run ] llama-3.2-1b Q8_0 decode  p=0      n=128  d=512    t=8   (attempt 1, free RAM 7.9 GB)
+       ->    25.47 +/-  0.25 tok/s | peak RSS 1.39 GB
+[run ] llama-3.2-1b Q8_0 decode  p=0      n=128  d=1024   t=8   (attempt 1, free RAM 7.9 GB)
+       ->    24.71 +/-  0.10 tok/s | peak RSS 1.42 GB
+[run ] llama-3.2-1b Q8_0 decode  p=0      n=128  d=2048   t=8   (attempt 1, free RAM 7.9 GB)
+       ->    22.63 +/-  0.02 tok/s | peak RSS 1.49 GB
+[run ] llama-3.2-1b Q8_0 decode  p=0      n=128  d=4096   t=8   (attempt 1, free RAM 7.9 GB)
+       ->    18.80 +/-  0.08 tok/s | peak RSS 1.61 GB
+[run ] llama-3.2-1b Q8_0 decode  p=0      n=128  d=8192   t=8   (attempt 1, free RAM 7.9 GB)
+       ->    13.75 +/-  0.04 tok/s | peak RSS 1.87 GB
+[run ] llama-3.2-1b Q8_0 decode  p=0      n=128  d=16256  t=8   (attempt 1, free RAM 7.9 GB)
+       ->     9.02 +/-  0.01 tok/s | peak RSS 2.37 GB
+[run ] llama-3.2-1b Q8_0 threads p=512    n=0    d=0      t=1   (attempt 1, free RAM 7.9 GB)
+       ->    60.41 +/-  0.15 tok/s | peak RSS 1.37 GB
+[run ] llama-3.2-1b Q8_0 threads p=0      n=128  d=0      t=1   (attempt 1, free RAM 7.9 GB)
+       ->    13.26 +/-  0.16 tok/s | peak RSS 1.30 GB
+[run ] llama-3.2-1b Q8_0 threads p=512    n=0    d=0      t=2   (attempt 1, free RAM 7.9 GB)
+       ->   110.75 +/-  3.37 tok/s | peak RSS 1.37 GB
+[run ] llama-3.2-1b Q8_0 threads p=0      n=128  d=0      t=2   (attempt 1, free RAM 7.9 GB)
+       ->    21.62 +/-  0.09 tok/s | peak RSS 1.30 GB
+[run ] llama-3.2-1b Q8_0 threads p=512    n=0    d=0      t=4   (attempt 1, free RAM 7.9 GB)
+       ->   180.21 +/-  3.41 tok/s | peak RSS 1.37 GB
+[run ] llama-3.2-1b Q8_0 threads p=0      n=128  d=0      t=4   (attempt 1, free RAM 7.9 GB)
+       ->    25.54 +/-  0.03 tok/s | peak RSS 1.30 GB
+[run ] llama-3.2-1b Q8_0 threads p=512    n=0    d=0      t=8   (attempt 1, free RAM 7.9 GB)
+       ->   277.96 +/-  4.01 tok/s | peak RSS 1.37 GB
+[run ] llama-3.2-1b Q8_0 threads p=0      n=128  d=0      t=8   (attempt 1, free RAM 7.9 GB)
+       ->    26.10 +/-  0.82 tok/s | peak RSS 1.30 GB
+[run ] llama-3.2-3b Q4_K_M prefill p=128    n=0    d=0      t=8   (attempt 1, free RAM 7.9 GB)
+       ->   143.32 +/-  3.53 tok/s | peak RSS 3.26 GB
+[run ] llama-3.2-3b Q4_K_M prefill p=512    n=0    d=0      t=8   (attempt 1, free RAM 7.8 GB)
+       ->   144.19 +/-  2.14 tok/s | peak RSS 3.34 GB
+[run ] llama-3.2-3b Q4_K_M prefill p=1024   n=0    d=0      t=8   (attempt 1, free RAM 7.9 GB)
+       ->   140.25 +/-  1.30 tok/s | peak RSS 3.39 GB
+[run ] llama-3.2-3b Q4_K_M prefill p=2048   n=0    d=0      t=8   (attempt 1, free RAM 7.8 GB)
+       ->   131.10 +/-  1.17 tok/s | peak RSS 3.50 GB
+[run ] llama-3.2-3b Q4_K_M prefill p=4096   n=0    d=0      t=8   (attempt 1, free RAM 7.9 GB)
+       ->   117.51 +/-  1.71 tok/s | peak RSS 3.72 GB
+[run ] llama-3.2-3b Q4_K_M prefill p=8192   n=0    d=0      t=8   (attempt 1, free RAM 7.8 GB)
+       ->    84.21 +/-  7.26 tok/s | peak RSS 4.17 GB
+[run ] llama-3.2-3b Q4_K_M decode  p=0      n=128  d=0      t=8   (attempt 1, free RAM 7.9 GB)
+       ->    15.96 +/-  0.54 tok/s | peak RSS 3.24 GB
+[run ] llama-3.2-3b Q4_K_M decode  p=0      n=128  d=512    t=8   (attempt 1, free RAM 7.9 GB)
+       ->    15.47 +/-  0.07 tok/s | peak RSS 3.42 GB
+[run ] llama-3.2-3b Q4_K_M decode  p=0      n=128  d=1024   t=8   (attempt 1, free RAM 7.9 GB)
+       ->    14.26 +/-  0.27 tok/s | peak RSS 3.53 GB
+[run ] llama-3.2-3b Q4_K_M decode  p=0      n=128  d=2048   t=8   (attempt 1, free RAM 7.8 GB)
+       ->    11.82 +/-  0.22 tok/s | peak RSS 3.75 GB
+[run ] llama-3.2-3b Q4_K_M decode  p=0      n=128  d=4096   t=8   (attempt 1, free RAM 7.9 GB)
+       ->     8.88 +/-  0.06 tok/s | peak RSS 4.19 GB
+[run ] llama-3.2-3b Q4_K_M decode  p=0      n=128  d=8064   t=8   (attempt 1, free RAM 7.9 GB)
+       ->     6.09 +/-  0.06 tok/s | peak RSS 5.03 GB | OVER 4.5GB
+[run ] llama-3.2-3b Q4_K_M threads p=512    n=0    d=0      t=1   (attempt 1, free RAM 7.9 GB)
+       ->    29.80 +/-  0.45 tok/s | peak RSS 3.33 GB
+[run ] llama-3.2-3b Q4_K_M threads p=0      n=128  d=0      t=1   (attempt 1, free RAM 7.9 GB)
+       ->     7.71 +/-  0.14 tok/s | peak RSS 3.24 GB
+[run ] llama-3.2-3b Q4_K_M threads p=512    n=0    d=0      t=2   (attempt 1, free RAM 7.9 GB)
+       ->    57.09 +/-  0.38 tok/s | peak RSS 3.33 GB
+[run ] llama-3.2-3b Q4_K_M threads p=0      n=128  d=0      t=2   (attempt 1, free RAM 7.9 GB)
+       ->    12.46 +/-  0.07 tok/s | peak RSS 3.24 GB
+[run ] llama-3.2-3b Q4_K_M threads p=512    n=0    d=0      t=4   (attempt 1, free RAM 7.9 GB)
+       ->    90.14 +/-  2.44 tok/s | peak RSS 3.33 GB
+[run ] llama-3.2-3b Q4_K_M threads p=0      n=128  d=0      t=4   (attempt 1, free RAM 7.9 GB)
+       ->    15.35 +/-  0.04 tok/s | peak RSS 3.24 GB
+[run ] llama-3.2-3b Q4_K_M threads p=512    n=0    d=0      t=8   (attempt 1, free RAM 7.9 GB)
+       ->   147.68 +/-  1.92 tok/s | peak RSS 3.34 GB
+[run ] llama-3.2-3b Q4_K_M threads p=0      n=128  d=0      t=8   (attempt 1, free RAM 7.9 GB)
+       ->    16.36 +/-  0.06 tok/s | peak RSS 3.24 GB
+
+[done] planned 64, executed 57, failed 0, elapsed 57.9 min -> /home/harsh/cpu-inference-option1/results/bench_laptop.csv

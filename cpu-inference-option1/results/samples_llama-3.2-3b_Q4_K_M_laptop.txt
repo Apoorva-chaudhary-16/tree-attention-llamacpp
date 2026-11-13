@@ -1,0 +1,28 @@
+### PROMPT: 'The capital of France is'
+Paris. The capital of Italy is Rome. The capital of Spain is Madrid. The capital of Portugal is Lisbon. The capital of Germany is Berlin. The capital of the United Kingdom is London. The capital of the United States is Washington, D.C. The capital of Canada is Ottawa. The capital of Australia is Canberra
+[sane=True]
+
+### PROMPT: 'Explain in two sentences why the sky is blue.'
+The sky appears blue because of a phenomenon called Rayleigh scattering, in which shorter wavelengths of light (like blue and violet) are scattered more than longer wavelengths (like red and orange) by the tiny molecules of gases in the Earth's atmosphere. This scattering effect gives the sky its blue color, as the scattered blue light
+[sane=True]
+
+### PROMPT: 'def fibonacci(n):\n    """Return the n-th Fibonacci number."""\n'
+if n <= 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+
+def fibonacci_iterative(n):
+    """Return the n-th Fibonacci number using an iterative approach."""
+    if n <=
+[sane=True]
+
+### PROMPT: 'List three differences between a CPU and a GPU:'
+1) CPU vs. GPU in terms of processing power, 2) CPU vs. GPU in terms of memory, 3) CPU vs. GPU in terms of power consumption.
+
+## Step 1: Identify the primary function of a CPU
+A CPU (Central Processing Unit) is the primary processor of a
+[sane=True]
+

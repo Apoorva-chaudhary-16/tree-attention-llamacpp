@@ -1,0 +1,8 @@
+# Core (needed on your laptop)
+psutil>=5.9
+numpy>=1.24
+pandas>=2.0
+matplotlib>=3.7
+gguf>=0.10          # reads GGUF metadata for the roofline model
+py-cpuinfo>=9.0     # SIMD flags / cache sizes on Windows + macOS
+huggingface_hub>=0.23   # optional: faster model download (urllib fallback exists)

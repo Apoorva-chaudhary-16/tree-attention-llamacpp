@@ -1,0 +1,5 @@
+tag,exp,model,quant,sweep,depth,threads,flags,bytes_per_token_gb,bw_gbs,pred_tg,meas_tg,meas_std,efficiency,achieved_gbs,peak_rss_gb
+rudra,reference,llama-3.2-1b,Q4_K_M,reference,0,4,,0.801960064,50.0054,62.35,38.662,0.011,0.62,31.01,1.262
+rudra,baseline,llama-3.2-1b,Q4_K_M,threads,0,1,,0.801960064,13.458,16.78,11.831,0.006,0.705,9.49,1.262
+rudra,baseline,llama-3.2-1b,Q4_K_M,threads,0,2,,0.801960064,25.9994,32.42,21.723,0.014,0.67,17.42,1.261
+rudra,baseline,llama-3.2-1b,Q4_K_M,threads,0,4,,0.801960064,50.0054,62.35,38.687,0.018,0.62,31.03,1.261

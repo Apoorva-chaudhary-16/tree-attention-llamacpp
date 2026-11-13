@@ -1,0 +1,73 @@
+{
+  "tag": "laptop",
+  "note": "i7-13700HX, 8 P-cores only (Windows affinity 0x5555 on vmmemWSL), WSL2 10GB, plugged in, performance mode",
+  "os": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+  "machine": "x86_64",
+  "python": "3.14.4",
+  "ram_total_gb": 9.71,
+  "ram_available_gb": 8.38,
+  "logical_cpus_allowed": 8,
+  "default_max_threads": 8,
+  "slurm_job": "",
+  "slurm_node": "",
+  "physical_cores_psutil": 4,
+  "logical_cpus_psutil": 8,
+  "cpu_model": "13th Gen Intel(R) Core(TM) i7-13700HX",
+  "simd": [
+    "avx",
+    "avx2",
+    "avx_vnni",
+    "f16c",
+    "fma",
+    "sse4_2"
+  ],
+  "l1d": "192 KiB (4 instances)",
+  "l1i": "128 KiB (4 instances)",
+  "l2": "5 MiB (4 instances)",
+  "l3": "30 MiB (1 instance)",
+  "sockets": "1",
+  "threads_per_core": "2",
+  "cores_per_socket": "4",
+  "numa_nodes": "1",
+  "lscpu_model": "13th Gen Intel(R) Core(TM) i7-13700HX",
+  "wsl": true,
+  "simd_summary": "AVX2",
+  "llama_cpp_commit": "2bc46baa9207d098d03741ac394e7faaf1a955b6",
+  "compiler": "gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+  "stream": {
+    "tag": "laptop",
+    "array_elems": 40000000,
+    "ntimes": 20,
+    "openmp": true,
+    "proc_bind": "close",
+    "per_thread_gbs": {
+      "1": {
+        "Copy": 30.386599999999998,
+        "Scale": 19.124,
+        "Add": 22.8012,
+        "Triad": 22.916700000000002
+      },
+      "2": {
+        "Copy": 31.1298,
+        "Scale": 21.4635,
+        "Add": 24.9793,
+        "Triad": 25.0305
+      },
+      "4": {
+        "Copy": 32.2027,
+        "Scale": 31.8093,
+        "Add": 32.7086,
+        "Triad": 32.7568
+      },
+      "8": {
+        "Copy": 33.0459,
+        "Scale": 33.063,
+        "Add": 33.2881,
+        "Triad": 33.3044
+      }
+    },
+    "best_threads": 8,
+    "peak_triad_gbs": 33.3044,
+    "peak_copy_gbs": 33.0459
+  }
+}

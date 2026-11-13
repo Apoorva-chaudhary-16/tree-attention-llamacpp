@@ -1,0 +1,72 @@
+{
+  "tag": "rudra",
+  "note": "PARAM Rudra cpu node rdcn20, job 186232, QoS aicte_qip (limit 4 CPUs)",
+  "os": "Linux-4.18.0-513.5.1.el8_9.x86_64-x86_64-with-glibc2.28",
+  "machine": "x86_64",
+  "python": "3.14.7",
+  "ram_total_gb": 187.53,
+  "ram_available_gb": 179.87,
+  "logical_cpus_allowed": 4,
+  "default_max_threads": 4,
+  "slurm_job": "186232",
+  "slurm_node": "rdcn20",
+  "physical_cores_psutil": 48,
+  "logical_cpus_psutil": 48,
+  "cpu_model": "Intel(R) Xeon(R) Gold 6240R CPU @ 2.40GHz",
+  "simd": [
+    "avx",
+    "avx2",
+    "avx512_vnni",
+    "avx512bw",
+    "avx512f",
+    "avx512vl",
+    "f16c",
+    "fma",
+    "sse4_2"
+  ],
+  "l1d": "32K",
+  "l1i": "32K",
+  "l2": "1024K",
+  "l3": "36608K",
+  "sockets": "2",
+  "threads_per_core": "1",
+  "cores_per_socket": "24",
+  "numa_nodes": "2",
+  "max_mhz": "4000.0000",
+  "lscpu_model": "Intel(R) Xeon(R) Gold 6240R CPU @ 2.40GHz",
+  "scaling_governor": "performance",
+  "wsl": false,
+  "simd_summary": "AVX-512",
+  "llama_cpp_commit": "unknown",
+  "compiler": "gcc (Spack GCC) 13.2.0",
+  "stream": {
+    "tag": "rudra",
+    "array_elems": 40000000,
+    "ntimes": 10,
+    "openmp": true,
+    "proc_bind": "close",
+    "per_thread_gbs": {
+      "1": {
+        "Copy": 10.508299999999998,
+        "Scale": 12.632,
+        "Add": 13.4322,
+        "Triad": 13.458
+      },
+      "2": {
+        "Copy": 20.8048,
+        "Scale": 24.6172,
+        "Add": 26.028299999999998,
+        "Triad": 25.9994
+      },
+      "4": {
+        "Copy": 40.876400000000004,
+        "Scale": 46.5525,
+        "Add": 49.797599999999996,
+        "Triad": 50.0054
+      }
+    },
+    "best_threads": 4,
+    "peak_triad_gbs": 50.0054,
+    "peak_copy_gbs": 40.876400000000004
+  }
+}

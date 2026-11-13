@@ -1,0 +1,30 @@
+==========================================
+SLURM_CLUSTER_NAME = paramrudra
+SLURM_ARRAY_JOB_ID = 
+SLURM_ARRAY_TASK_ID = 
+SLURM_ARRAY_TASK_COUNT = 
+SLURM_ARRAY_TASK_MAX = 
+SLURM_ARRAY_TASK_MIN = 
+SLURM_JOB_ACCOUNT = nsmext
+SLURM_JOB_ID = 186219
+SLURM_JOB_NAME = ref_llama1b
+SLURM_JOB_NODELIST = rdcn20
+SLURM_JOB_USER = bapic_iiitd
+SLURM_JOB_UID = 56023
+SLURM_JOB_PARTITION = cpu
+SLURM_TASK_PID = 49263
+SLURM_SUBMIT_DIR = /home/bapic_iiitd/1_group/harsh_opt1/cpu-inference-option1
+SLURM_CPUS_ON_NODE = 4
+SLURM_NTASKS = 1
+SLURM_TASK_PID = 49263
+==========================================
+[info] results -> /home/bapic_iiitd/1_group/harsh_opt1/cpu-inference-option1/results/bench_rudra.csv
+[info] llama-bench: /home/bapic_iiitd/1_group/harsh_opt1/cpu-inference-option1/third_party/llama.cpp/build/bin/llama-bench
+[info] max threads: 4, thread sweep: [1, 2, 4], reps: 3, extra flags: ''
+[run ] llama-3.2-1b Q4_K_M reference p=512    n=0    d=0      t=4   (attempt 1, free RAM 179.9 GB)
+       ->   290.95 +/-  0.26 tok/s | peak RSS 1.33 GB
+[run ] llama-3.2-1b Q4_K_M reference p=0      n=128  d=0      t=4   (attempt 1, free RAM 179.6 GB)
+       ->    38.66 +/-  0.01 tok/s | peak RSS 1.26 GB
+
+[done] planned 2, executed 2, failed 0, elapsed 0.3 min -> /home/bapic_iiitd/1_group/harsh_opt1/cpu-inference-option1/results/bench_rudra.csv
+finished

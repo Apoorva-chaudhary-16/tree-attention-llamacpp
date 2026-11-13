@@ -1,0 +1,31 @@
+memory bandwidth used: 50.0 GB/s (triad, peak over thread counts)
+
+llama-3.2-1b Q4_K_M: weights read/token = 0.800 GB (file 0.808 GB, tied embeddings=True), KV = 32.0 KiB per context token, KV bytes == weight bytes at ~24,410 tokens
+   depth      0:  0.802 GB/token  -> predicted    62.4 tok/s  (KV share  0.3 %)
+   depth   1024:  0.836 GB/token  -> predicted    59.8 tok/s  (KV share  4.3 %)
+   depth   2048:  0.869 GB/token  -> predicted    57.5 tok/s  (KV share  8.0 %)
+   depth   4096:  0.936 GB/token  -> predicted    53.4 tok/s  (KV share 14.6 %)
+   depth   8192:  1.070 GB/token  -> predicted    46.7 tok/s  (KV share 25.3 %)
+   depth  16256:  1.335 GB/token  -> predicted    37.5 tok/s  (KV share 40.1 %)
+
+llama-3.2-1b Q8_0: weights read/token = 1.313 GB (file 1.321 GB, tied embeddings=True), KV = 32.0 KiB per context token, KV bytes == weight bytes at ~40,077 tokens
+   depth      0:  1.315 GB/token  -> predicted    38.0 tok/s  (KV share  0.2 %)
+   depth   1024:  1.349 GB/token  -> predicted    37.1 tok/s  (KV share  2.6 %)
+   depth   2048:  1.382 GB/token  -> predicted    36.2 tok/s  (KV share  5.0 %)
+   depth   4096:  1.450 GB/token  -> predicted    34.5 tok/s  (KV share  9.4 %)
+   depth   8192:  1.584 GB/token  -> predicted    31.6 tok/s  (KV share 17.1 %)
+   depth  16256:  1.848 GB/token  -> predicted    27.1 tok/s  (KV share 28.9 %)
+
+llama-3.2-3b Q4_K_M: weights read/token = 2.012 GB (file 2.019 GB, tied embeddings=True), KV = 112.0 KiB per context token, KV bytes == weight bytes at ~17,539 tokens
+   depth      0:  2.019 GB/token  -> predicted    24.8 tok/s  (KV share  0.4 %)
+   depth   1024:  2.136 GB/token  -> predicted    23.4 tok/s  (KV share  5.8 %)
+   depth   2048:  2.254 GB/token  -> predicted    22.2 tok/s  (KV share 10.7 %)
+   depth   4096:  2.489 GB/token  -> predicted    20.1 tok/s  (KV share 19.2 %)
+   depth   8064:  2.944 GB/token  -> predicted    17.0 tok/s  (KV share 31.7 %)
+
+prediction table -> /home/harsh/cpu-inference-option1/results/roofline_predict_rudra.csv
+
+predicted vs measured -> /home/harsh/cpu-inference-option1/results/roofline_compare_rudra.csv
+model          quant    depth thr      pred     meas  eff   achieved GB/s
+
+How to read it: efficiency = measured / predicted. ~0.7-0.9 means decode is bandwidth-bound; much lower means compute, threading or cache effects (see profiling).
